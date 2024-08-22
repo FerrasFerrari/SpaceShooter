@@ -5,8 +5,8 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
     public float moveSpeed;
-   // public float yPosition;
-    Vector2 enemyVelocity;
+    //public float yPosition;
+    //Vector2 enemyVelocity;
     public float stopYline;
     public bool doesStop = false;
     private bool stop = false;

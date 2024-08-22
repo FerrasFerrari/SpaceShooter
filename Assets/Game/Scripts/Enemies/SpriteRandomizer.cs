@@ -5,10 +5,6 @@ using UnityEngine;
 public class SpriteRandomizer : MonoBehaviour
 {
     public Sprite[] sprites;
-    private void Awake()
-    {
-        
-    }
 
     void Start()
     {
