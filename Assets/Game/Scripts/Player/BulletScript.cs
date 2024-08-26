@@ -30,4 +30,10 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        Camera camera = other.GetComponent<Camera>();
+        if (camera != null && isEnemy) {
+            Destroy(gameObject, 0.2f);
+        }
+    }
 }
