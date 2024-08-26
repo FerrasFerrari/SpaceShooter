@@ -18,12 +18,16 @@ public class Gun : MonoBehaviour
     public float shootDelaySeconds = 0.0f;
     float shootTimer = 0f;
     float delayTimer = 0f;
+    Animator animator;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
+        if(animator != null && animator.GetBool("IsDead") == true){
+            canShoot = false;
+        }
         direction = (transform.rotation * Vector2.up).normalized;
 
         if (autoShoot)

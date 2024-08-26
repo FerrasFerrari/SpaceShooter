@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 108272086209365871}
   - component: {fileID: 2883618743284964964}
   - component: {fileID: 7224821274006825817}
+  - component: {fileID: -6230657276743354206}
+  - component: {fileID: 6621556214481781597}
   - component: {fileID: 5926094643033395226}
   - component: {fileID: 1492270972163023466}
   - component: {fileID: 4949584415118730095}
-  - component: {fileID: 6621556214481781597}
   m_Layer: 6
   m_Name: Enemy2
   m_TagString: Untagged
@@ -124,6 +125,42 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.44830248, y: 0.5769231}
   m_Direction: 0
+--- !u!95 &-6230657276743354206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276351976856355125}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54197aa74eead2a46b3efcc2e2064f47, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6621556214481781597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276351976856355125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208351da0c42bee4e99f20d2aa77d123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1794808425, guid: e13533125e0a1bb40a6ab090a5bac581, type: 3}
+  - {fileID: 690961929, guid: e13533125e0a1bb40a6ab090a5bac581, type: 3}
 --- !u!114 &5926094643033395226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,18 +204,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2851d878865547a19e5f29ba34db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6621556214481781597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276351976856355125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208351da0c42bee4e99f20d2aa77d123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -1794808425, guid: e13533125e0a1bb40a6ab090a5bac581, type: 3}
-  - {fileID: 690961929, guid: e13533125e0a1bb40a6ab090a5bac581, type: 3}

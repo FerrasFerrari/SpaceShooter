@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Destruct : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator animator;
+    public MoveDown moveDownScript;
+    public MoveHorizontal moveHorizontalScript;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        moveDownScript = GetComponent<MoveDown>();
+        moveHorizontalScript = GetComponent<MoveHorizontal>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -19,7 +22,16 @@ public class Destruct : MonoBehaviour
         BulletScript bullet = other.gameObject.GetComponent<BulletScript>();
         if(bullet != null){
             if(!bullet.isEnemy){
-                Destroy(gameObject);
+                if (moveDownScript != null)
+                {
+                    moveDownScript.moveSpeed = 0;
+                }
+                else
+                {
+                    moveHorizontalScript.moveSpeed = 0;
+                }
+                animator.SetBool("IsDead", true);
+                //Destroy(gameObject);
                 Destroy(bullet.gameObject);
             }
         }
