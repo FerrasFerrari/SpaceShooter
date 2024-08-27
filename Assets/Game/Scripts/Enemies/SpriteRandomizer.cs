@@ -14,7 +14,6 @@ public class SpriteRandomizer : MonoBehaviour
         if(Random.Range(0,2) == 1)
         {
             animator.SetTrigger("IsVariant");
-            Debug.Log("f");
         }
     }
 

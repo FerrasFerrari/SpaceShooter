@@ -32,7 +32,7 @@ public class Destruct : MonoBehaviour
                 }
                 animator.SetBool("IsDead", true);
                 //Destroy(gameObject);
-                Destroy(bullet.gameObject);
+                ObjectPoolManager.DestroyPooled(bullet.gameObject);
             }
         }
     }
