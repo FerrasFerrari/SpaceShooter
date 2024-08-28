@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         BulletScript bullet = other.gameObject.GetComponent<BulletScript>();
         if(bullet != null && bullet.isEnemy){
                 Die();
-                ObjectPoolManager.DestroyPooled(bullet.gameObject);
+                Destroy(bullet.gameObject);
         }
     }
 
