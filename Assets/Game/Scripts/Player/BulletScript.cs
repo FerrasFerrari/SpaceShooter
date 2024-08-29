@@ -14,7 +14,7 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().AddRelativeForce(speed * direction, ForceMode2D.Impulse);
-        Destroy(gameObject, bulletLifetime);
+        //Destroy(gameObject, bulletLifetime);
     }
 
     void Update()
@@ -27,13 +27,13 @@ public class BulletScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         Camera camera = other.GetComponent<Camera>();
         if (camera != null && !isEnemy) {
-            Destroy(gameObject);
+            ObjectPoolManager.DestroyObject(gameObject);
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
         Camera camera = other.GetComponent<Camera>();
         if (camera != null && isEnemy) {
-            Destroy(gameObject, 0.2f);
+            ObjectPoolManager.DestroyObject(gameObject);
         }
     }
 }

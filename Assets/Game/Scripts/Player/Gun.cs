@@ -57,7 +57,7 @@ public class Gun : MonoBehaviour
         //bullet.GetComponent<Rigidbody2D>().AddRelativeForce(bulletSpeed * Vector2.up, ForceMode2D.Impulse);
     }*/
     public void Shoot(){
-        GameObject bullet = Instantiate(bulletScript.gameObject, transform.position, Quaternion.identity);
+        GameObject bullet = ObjectPoolManager.SpawnObject(bulletScript.gameObject, transform.position, Quaternion.identity, ObjectPoolManager.PoolType.GameObject);
         BulletScript bulletD = bullet.GetComponent<BulletScript>();
         bulletD.direction = direction;
         bulletD.rotation = transform.rotation;
